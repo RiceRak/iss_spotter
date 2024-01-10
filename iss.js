@@ -8,6 +8,14 @@ const request = require('request');
  *   - An error, if any (nullable)
  *   - The IP address as a string (null if error). Example: "162.245.144.188"
  */
+
+// const one = "asdf";
+// const two = 3;
+// const three = function(){
+//   console.log("hello");
+// };
+// three();
+
 const fetchMyIP = function(callback) {
   request('https://api.ipify.org?format=json', (error, response, body) => {
     if (error) return callback(error, null);
